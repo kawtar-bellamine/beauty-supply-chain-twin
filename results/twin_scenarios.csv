@@ -1,0 +1,9 @@
+scenario,dcs,z,fill_rate_pct,otif_pct,lead_p50_days,lead_p90_days,units,days_of_cover,cost_per_unit_brl,holding_per_unit,last_mile_per_unit,dc_fixed_per_unit
+"Baseline: one DC in São Paulo, z 1.65",São Paulo DC,1.65,93.88,87.48,7.41,19.22,483436.0,4.69,15.175,0.257,14.717,0.0
+Regional DC in Recife,São Paulo DC + Recife DC,1.65,92.13,88.01,7.08,16.99,483436.0,5.21,16.009,0.286,13.588,1.773
+"Lower safety stock, z 0.84",São Paulo DC,0.84,93.69,87.45,7.42,19.22,483436.0,4.55,15.167,0.249,14.717,0.0
+"Higher safety stock, z 2.33",São Paulo DC,2.33,93.88,87.49,7.41,19.21,483436.0,4.81,15.182,0.264,14.717,0.0
+Plant capacity 1.5 x demand,São Paulo DC,1.65,95.25,87.95,7.31,19.1,483436.0,4.94,15.188,0.271,14.717,0.0
+Pre-build 10 days before Black Friday,São Paulo DC,1.65,98.07,88.4,7.22,18.98,483436.0,5.34,15.21,0.293,14.717,0.0
+"Unplanned +40 % demand, May 2018",São Paulo DC,1.65,89.67,87.4,7.47,19.23,498436.0,4.45,15.134,0.244,14.689,0.0
+"Plant at 50 % for 4 weeks, March 2018",São Paulo DC,1.65,93.88,87.48,7.41,19.22,483436.0,4.58,15.169,0.251,14.717,0.0

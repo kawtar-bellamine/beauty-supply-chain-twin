@@ -1,0 +1,805 @@
+{
+ "flow": {
+  "beauty_orders": 11722,
+  "stages": [
+   {
+    "stage": "Payment approval",
+    "p50_days": 0.01,
+    "p90_days": 1.42,
+    "mean_days": 0.43,
+    "share_of_lead_time_pct": 3.56
+   },
+   {
+    "stage": "Seller handling",
+    "p50_days": 1.69,
+    "p90_days": 5.6,
+    "mean_days": 2.6,
+    "share_of_lead_time_pct": 21.63
+   },
+   {
+    "stage": "Carrier transit",
+    "p50_days": 6.94,
+    "p90_days": 18.76,
+    "mean_days": 9.01,
+    "share_of_lead_time_pct": 74.81
+   },
+   {
+    "stage": "Order to delivery",
+    "p50_days": 9.51,
+    "p90_days": 23.06,
+    "mean_days": 12.04,
+    "share_of_lead_time_pct": 100.0
+   }
+  ],
+  "orders": 11722,
+  "late_pct": 7.26,
+  "late_if_shipped_late_pct": 25.51,
+  "late_if_shipped_on_time_pct": 5.6,
+  "shipped_late_pct": 8.33,
+  "late_caused_by_carrier_only_pct": 70.74,
+  "late_with_seller_delay_pct": 29.26,
+  "sellers_for_half_of_seller_late": 9,
+  "sellers_total": 584,
+  "regions": [
+   {
+    "customer_region": "SE",
+    "orders": 7951,
+    "share_pct": 67.83,
+    "lead_p50": 7.84,
+    "lead_p90": 18.15,
+    "transit_p50": 5.19,
+    "late_pct": 5.99,
+    "km_p50": 311.38,
+    "freight_per_order": 16.72
+   },
+   {
+    "customer_region": "S",
+    "orders": 1430,
+    "share_pct": 12.2,
+    "lead_p50": 11.71,
+    "lead_p90": 24.15,
+    "transit_p50": 8.31,
+    "late_pct": 6.15,
+    "km_p50": 686.36,
+    "freight_per_order": 20.96
+   },
+   {
+    "customer_region": "NE",
+    "orders": 1330,
+    "share_pct": 11.35,
+    "lead_p50": 17.2,
+    "lead_p90": 34.72,
+    "transit_p50": 13.99,
+    "late_pct": 15.11,
+    "km_p50": 1923.0,
+    "freight_per_order": 33.06
+   },
+   {
+    "customer_region": "CO",
+    "orders": 767,
+    "share_pct": 6.54,
+    "lead_p50": 13.04,
+    "lead_p90": 25.2,
+    "transit_p50": 9.89,
+    "late_pct": 7.95,
+    "km_p50": 883.36,
+    "freight_per_order": 22.96
+   },
+   {
+    "customer_region": "N",
+    "orders": 244,
+    "share_pct": 2.08,
+    "lead_p50": 19.46,
+    "lead_p90": 37.59,
+    "transit_p50": 16.31,
+    "late_pct": 10.25,
+    "km_p50": 2420.62,
+    "freight_per_order": 37.62
+   }
+  ]
+ },
+ "forecast": {
+  "best_total": "Exponential smoothing",
+  "scores": [
+   {
+    "region": "CO",
+    "method": "Exponential smoothing",
+    "wape_pct": 41.91,
+    "bias_pct": -3.28
+   },
+   {
+    "region": "CO",
+    "method": "Holt (level + trend)",
+    "wape_pct": 44.54,
+    "bias_pct": -4.2
+   },
+   {
+    "region": "CO",
+    "method": "Moving average 4 w",
+    "wape_pct": 43.7,
+    "bias_pct": -4.59
+   },
+   {
+    "region": "CO",
+    "method": "Naive (last week)",
+    "wape_pct": 50.76,
+    "bias_pct": -2.99
+   },
+   {
+    "region": "N",
+    "method": "Exponential smoothing",
+    "wape_pct": 45.78,
+    "bias_pct": -14.4
+   },
+   {
+    "region": "N",
+    "method": "Holt (level + trend)",
+    "wape_pct": 46.56,
+    "bias_pct": -11.53
+   },
+   {
+    "region": "N",
+    "method": "Moving average 4 w",
+    "wape_pct": 47.81,
+    "bias_pct": -13.6
+   },
+   {
+    "region": "N",
+    "method": "Naive (last week)",
+    "wape_pct": 60.53,
+    "bias_pct": -8.77
+   },
+   {
+    "region": "NE",
+    "method": "Exponential smoothing",
+    "wape_pct": 24.78,
+    "bias_pct": -7.81
+   },
+   {
+    "region": "NE",
+    "method": "Holt (level + trend)",
+    "wape_pct": 25.82,
+    "bias_pct": -4.83
+   },
+   {
+    "region": "NE",
+    "method": "Moving average 4 w",
+    "wape_pct": 25.46,
+    "bias_pct": -7.39
+   },
+   {
+    "region": "NE",
+    "method": "Naive (last week)",
+    "wape_pct": 30.12,
+    "bias_pct": -4.6
+   },
+   {
+    "region": "S",
+    "method": "Exponential smoothing",
+    "wape_pct": 33.93,
+    "bias_pct": 1.49
+   },
+   {
+    "region": "S",
+    "method": "Holt (level + trend)",
+    "wape_pct": 37.36,
+    "bias_pct": 3.65
+   },
+   {
+    "region": "S",
+    "method": "Moving average 4 w",
+    "wape_pct": 37.12,
+    "bias_pct": 2.01
+   },
+   {
+    "region": "S",
+    "method": "Naive (last week)",
+    "wape_pct": 39.56,
+    "bias_pct": 1.09
+   },
+   {
+    "region": "SE",
+    "method": "Exponential smoothing",
+    "wape_pct": 18.52,
+    "bias_pct": -4.99
+   },
+   {
+    "region": "SE",
+    "method": "Holt (level + trend)",
+    "wape_pct": 18.53,
+    "bias_pct": 1.21
+   },
+   {
+    "region": "SE",
+    "method": "Moving average 4 w",
+    "wape_pct": 18.5,
+    "bias_pct": -3.61
+   },
+   {
+    "region": "SE",
+    "method": "Naive (last week)",
+    "wape_pct": 23.6,
+    "bias_pct": -3.05
+   },
+   {
+    "region": "Total",
+    "method": "Exponential smoothing",
+    "wape_pct": 18.79,
+    "bias_pct": -4.65
+   },
+   {
+    "region": "Total",
+    "method": "Holt (level + trend)",
+    "wape_pct": 19.4,
+    "bias_pct": 0.27
+   },
+   {
+    "region": "Total",
+    "method": "Moving average 4 w",
+    "wape_pct": 19.56,
+    "bias_pct": -3.65
+   },
+   {
+    "region": "Total",
+    "method": "Naive (last week)",
+    "wape_pct": 23.56,
+    "bias_pct": -2.87
+   }
+  ]
+ },
+ "twin": {
+  "volume": 40,
+  "baseline_fill_outside_black_friday_pct": 100.0,
+  "simulated_orders": 451236,
+  "eval_window": [
+   "2017-03-01",
+   "2018-08-15"
+  ],
+  "scenarios": [
+   {
+    "scenario": "Baseline: one DC in S\u00e3o Paulo, z 1.65",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 1.65,
+    "fill_rate_pct": 93.88,
+    "otif_pct": 87.48,
+    "lead_p50_days": 7.41,
+    "lead_p90_days": 19.22,
+    "units": 483436.0,
+    "days_of_cover": 4.69,
+    "cost_per_unit_brl": 15.175,
+    "holding_per_unit": 0.257,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0
+   },
+   {
+    "scenario": "Regional DC in Recife",
+    "dcs": "S\u00e3o Paulo DC + Recife DC",
+    "z": 1.65,
+    "fill_rate_pct": 92.13,
+    "otif_pct": 88.01,
+    "lead_p50_days": 7.08,
+    "lead_p90_days": 16.99,
+    "units": 483436.0,
+    "days_of_cover": 5.21,
+    "cost_per_unit_brl": 16.009,
+    "holding_per_unit": 0.286,
+    "last_mile_per_unit": 13.588,
+    "dc_fixed_per_unit": 1.773
+   },
+   {
+    "scenario": "Lower safety stock, z 0.84",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 0.84,
+    "fill_rate_pct": 93.69,
+    "otif_pct": 87.45,
+    "lead_p50_days": 7.42,
+    "lead_p90_days": 19.22,
+    "units": 483436.0,
+    "days_of_cover": 4.55,
+    "cost_per_unit_brl": 15.167,
+    "holding_per_unit": 0.249,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0
+   },
+   {
+    "scenario": "Higher safety stock, z 2.33",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 2.33,
+    "fill_rate_pct": 93.88,
+    "otif_pct": 87.49,
+    "lead_p50_days": 7.41,
+    "lead_p90_days": 19.21,
+    "units": 483436.0,
+    "days_of_cover": 4.81,
+    "cost_per_unit_brl": 15.182,
+    "holding_per_unit": 0.264,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0
+   },
+   {
+    "scenario": "Plant capacity 1.5 x demand",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 1.65,
+    "fill_rate_pct": 95.25,
+    "otif_pct": 87.95,
+    "lead_p50_days": 7.31,
+    "lead_p90_days": 19.1,
+    "units": 483436.0,
+    "days_of_cover": 4.94,
+    "cost_per_unit_brl": 15.188,
+    "holding_per_unit": 0.271,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0
+   },
+   {
+    "scenario": "Pre-build 10 days before Black Friday",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 1.65,
+    "fill_rate_pct": 98.07,
+    "otif_pct": 88.4,
+    "lead_p50_days": 7.22,
+    "lead_p90_days": 18.98,
+    "units": 483436.0,
+    "days_of_cover": 5.34,
+    "cost_per_unit_brl": 15.21,
+    "holding_per_unit": 0.293,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0
+   },
+   {
+    "scenario": "Unplanned +40 % demand, May 2018",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 1.65,
+    "fill_rate_pct": 89.67,
+    "otif_pct": 87.4,
+    "lead_p50_days": 7.47,
+    "lead_p90_days": 19.23,
+    "units": 498436.0,
+    "days_of_cover": 4.45,
+    "cost_per_unit_brl": 15.134,
+    "holding_per_unit": 0.244,
+    "last_mile_per_unit": 14.689,
+    "dc_fixed_per_unit": 0.0
+   },
+   {
+    "scenario": "Plant at 50 % for 4 weeks, March 2018",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 1.65,
+    "fill_rate_pct": 93.88,
+    "otif_pct": 87.48,
+    "lead_p50_days": 7.41,
+    "lead_p90_days": 19.22,
+    "units": 483436.0,
+    "days_of_cover": 4.58,
+    "cost_per_unit_brl": 15.169,
+    "holding_per_unit": 0.251,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0
+   }
+  ],
+  "frontier": [
+   {
+    "scenario": "z 0.84",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 0.84,
+    "fill_rate_pct": 93.69,
+    "otif_pct": 87.45,
+    "lead_p50_days": 7.42,
+    "lead_p90_days": 19.22,
+    "units": 483436.0,
+    "days_of_cover": 4.55,
+    "cost_per_unit_brl": 15.167,
+    "holding_per_unit": 0.249,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0,
+    "ne_fill_rate_pct": 93.99,
+    "ne_otif_pct": 91.03
+   },
+   {
+    "scenario": "z 1.28",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 1.28,
+    "fill_rate_pct": 93.77,
+    "otif_pct": 87.46,
+    "lead_p50_days": 7.42,
+    "lead_p90_days": 19.22,
+    "units": 483436.0,
+    "days_of_cover": 4.63,
+    "cost_per_unit_brl": 15.171,
+    "holding_per_unit": 0.254,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0,
+    "ne_fill_rate_pct": 94.1,
+    "ne_otif_pct": 91.03
+   },
+   {
+    "scenario": "z 1.65",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 1.65,
+    "fill_rate_pct": 93.88,
+    "otif_pct": 87.48,
+    "lead_p50_days": 7.41,
+    "lead_p90_days": 19.22,
+    "units": 483436.0,
+    "days_of_cover": 4.69,
+    "cost_per_unit_brl": 15.175,
+    "holding_per_unit": 0.257,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0,
+    "ne_fill_rate_pct": 94.24,
+    "ne_otif_pct": 91.03
+   },
+   {
+    "scenario": "z 2.05",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 2.05,
+    "fill_rate_pct": 93.88,
+    "otif_pct": 87.48,
+    "lead_p50_days": 7.41,
+    "lead_p90_days": 19.22,
+    "units": 483436.0,
+    "days_of_cover": 4.76,
+    "cost_per_unit_brl": 15.179,
+    "holding_per_unit": 0.261,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0,
+    "ne_fill_rate_pct": 94.24,
+    "ne_otif_pct": 91.03
+   },
+   {
+    "scenario": "z 2.33",
+    "dcs": "S\u00e3o Paulo DC",
+    "z": 2.33,
+    "fill_rate_pct": 93.88,
+    "otif_pct": 87.49,
+    "lead_p50_days": 7.41,
+    "lead_p90_days": 19.21,
+    "units": 483436.0,
+    "days_of_cover": 4.81,
+    "cost_per_unit_brl": 15.182,
+    "holding_per_unit": 0.264,
+    "last_mile_per_unit": 14.717,
+    "dc_fixed_per_unit": 0.0,
+    "ne_fill_rate_pct": 94.24,
+    "ne_otif_pct": 91.04
+   },
+   {
+    "scenario": "z 0.84",
+    "dcs": "S\u00e3o Paulo DC + Recife DC",
+    "z": 0.84,
+    "fill_rate_pct": 91.54,
+    "otif_pct": 87.98,
+    "lead_p50_days": 7.09,
+    "lead_p90_days": 17.0,
+    "units": 483436.0,
+    "days_of_cover": 5.05,
+    "cost_per_unit_brl": 16.0,
+    "holding_per_unit": 0.277,
+    "last_mile_per_unit": 13.588,
+    "dc_fixed_per_unit": 1.773,
+    "ne_fill_rate_pct": 79.07,
+    "ne_otif_pct": 96.91
+   },
+   {
+    "scenario": "z 1.28",
+    "dcs": "S\u00e3o Paulo DC + Recife DC",
+    "z": 1.28,
+    "fill_rate_pct": 92.0,
+    "otif_pct": 88.0,
+    "lead_p50_days": 7.08,
+    "lead_p90_days": 16.99,
+    "units": 483436.0,
+    "days_of_cover": 5.14,
+    "cost_per_unit_brl": 16.005,
+    "holding_per_unit": 0.282,
+    "last_mile_per_unit": 13.588,
+    "dc_fixed_per_unit": 1.773,
+    "ne_fill_rate_pct": 82.09,
+    "ne_otif_pct": 96.93
+   },
+   {
+    "scenario": "z 1.65",
+    "dcs": "S\u00e3o Paulo DC + Recife DC",
+    "z": 1.65,
+    "fill_rate_pct": 92.13,
+    "otif_pct": 88.01,
+    "lead_p50_days": 7.08,
+    "lead_p90_days": 16.99,
+    "units": 483436.0,
+    "days_of_cover": 5.21,
+    "cost_per_unit_brl": 16.009,
+    "holding_per_unit": 0.286,
+    "last_mile_per_unit": 13.588,
+    "dc_fixed_per_unit": 1.773,
+    "ne_fill_rate_pct": 83.1,
+    "ne_otif_pct": 96.94
+   },
+   {
+    "scenario": "z 2.05",
+    "dcs": "S\u00e3o Paulo DC + Recife DC",
+    "z": 2.05,
+    "fill_rate_pct": 92.46,
+    "otif_pct": 88.05,
+    "lead_p50_days": 7.08,
+    "lead_p90_days": 16.98,
+    "units": 483436.0,
+    "days_of_cover": 5.29,
+    "cost_per_unit_brl": 16.014,
+    "holding_per_unit": 0.29,
+    "last_mile_per_unit": 13.588,
+    "dc_fixed_per_unit": 1.773,
+    "ne_fill_rate_pct": 85.12,
+    "ne_otif_pct": 96.95
+   },
+   {
+    "scenario": "z 2.33",
+    "dcs": "S\u00e3o Paulo DC + Recife DC",
+    "z": 2.33,
+    "fill_rate_pct": 92.63,
+    "otif_pct": 88.05,
+    "lead_p50_days": 7.08,
+    "lead_p90_days": 16.98,
+    "units": 483436.0,
+    "days_of_cover": 5.35,
+    "cost_per_unit_brl": 16.017,
+    "holding_per_unit": 0.293,
+    "last_mile_per_unit": 13.588,
+    "dc_fixed_per_unit": 1.773,
+    "ne_fill_rate_pct": 86.61,
+    "ne_otif_pct": 96.95
+   }
+  ],
+  "north_east": {
+   "one DC": {
+    "fill_rate_pct": 94.24,
+    "otif_pct": 91.03,
+    "lead_p50_days": 15.06,
+    "lead_p90_days": 29.7,
+    "units": 53634.0
+   },
+   "with Recife DC": {
+    "fill_rate_pct": 83.1,
+    "otif_pct": 96.94,
+    "lead_p50_days": 8.88,
+    "lead_p90_days": 19.88,
+    "units": 53634.0
+   }
+  },
+  "black_friday": {
+   "no pre-build": {
+    "fill_rate_pct": 32.56,
+    "otif_pct": 77.31,
+    "lead_p50_days": 10.16,
+    "lead_p90_days": 22.08,
+    "units": 43895.0
+   },
+   "pre-build 10 days": {
+    "fill_rate_pct": 78.77,
+    "otif_pct": 87.52,
+    "lead_p50_days": 7.94,
+    "lead_p90_days": 19.81,
+    "units": 43895.0
+   },
+   "pre-build 20 days": {
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.3,
+    "lead_p50_days": 7.55,
+    "lead_p90_days": 19.36,
+    "units": 43895.0
+   }
+  },
+  "stress": [
+   {
+    "loss_pct": 20,
+    "weeks": 1,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.13,
+    "lead_p50_days": 7.01,
+    "lead_p90_days": 18.25,
+    "units": 29967.0
+   },
+   {
+    "loss_pct": 20,
+    "weeks": 2,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.21,
+    "lead_p50_days": 7.0,
+    "lead_p90_days": 18.42,
+    "units": 37847.0
+   },
+   {
+    "loss_pct": 20,
+    "weeks": 4,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.35,
+    "lead_p50_days": 7.0,
+    "lead_p90_days": 18.21,
+    "units": 53812.0
+   },
+   {
+    "loss_pct": 20,
+    "weeks": 6,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.32,
+    "lead_p50_days": 6.99,
+    "lead_p90_days": 18.1,
+    "units": 73759.0
+   },
+   {
+    "loss_pct": 35,
+    "weeks": 1,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.13,
+    "lead_p50_days": 7.01,
+    "lead_p90_days": 18.25,
+    "units": 29967.0
+   },
+   {
+    "loss_pct": 35,
+    "weeks": 2,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.21,
+    "lead_p50_days": 7.0,
+    "lead_p90_days": 18.42,
+    "units": 37847.0
+   },
+   {
+    "loss_pct": 35,
+    "weeks": 4,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.35,
+    "lead_p50_days": 7.0,
+    "lead_p90_days": 18.21,
+    "units": 53812.0
+   },
+   {
+    "loss_pct": 35,
+    "weeks": 6,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.32,
+    "lead_p50_days": 6.99,
+    "lead_p90_days": 18.1,
+    "units": 73759.0
+   },
+   {
+    "loss_pct": 50,
+    "weeks": 1,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.13,
+    "lead_p50_days": 7.01,
+    "lead_p90_days": 18.25,
+    "units": 29967.0
+   },
+   {
+    "loss_pct": 50,
+    "weeks": 2,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.21,
+    "lead_p50_days": 7.0,
+    "lead_p90_days": 18.42,
+    "units": 37847.0
+   },
+   {
+    "loss_pct": 50,
+    "weeks": 4,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.35,
+    "lead_p50_days": 7.0,
+    "lead_p90_days": 18.21,
+    "units": 53812.0
+   },
+   {
+    "loss_pct": 50,
+    "weeks": 6,
+    "fill_rate_pct": 98.49,
+    "otif_pct": 88.27,
+    "lead_p50_days": 7.0,
+    "lead_p90_days": 18.11,
+    "units": 73759.0
+   },
+   {
+    "loss_pct": 65,
+    "weeks": 1,
+    "fill_rate_pct": 100.0,
+    "otif_pct": 88.13,
+    "lead_p50_days": 7.01,
+    "lead_p90_days": 18.25,
+    "units": 29967.0
+   },
+   {
+    "loss_pct": 65,
+    "weeks": 2,
+    "fill_rate_pct": 81.4,
+    "otif_pct": 87.6,
+    "lead_p50_days": 7.11,
+    "lead_p90_days": 18.85,
+    "units": 37847.0
+   },
+   {
+    "loss_pct": 65,
+    "weeks": 4,
+    "fill_rate_pct": 52.41,
+    "otif_pct": 79.98,
+    "lead_p50_days": 8.35,
+    "lead_p90_days": 20.39,
+    "units": 53812.0
+   },
+   {
+    "loss_pct": 65,
+    "weeks": 6,
+    "fill_rate_pct": 17.99,
+    "otif_pct": 61.94,
+    "lead_p50_days": 11.92,
+    "lead_p90_days": 23.83,
+    "units": 73759.0
+   }
+  ],
+  "promise_days": {
+   "AC": 33.0,
+   "AL": 31.0,
+   "AM": 33.0,
+   "AP": 33.0,
+   "BA": 27.0,
+   "CE": 33.0,
+   "DF": 23.0,
+   "ES": 22.0,
+   "GO": 22.0,
+   "MA": 33.0,
+   "MG": 19.0,
+   "MS": 23.0,
+   "MT": 27.0,
+   "PA": 33.0,
+   "PB": 33.0,
+   "PE": 31.0,
+   "PI": 31.0,
+   "PR": 19.0,
+   "RJ": 19.0,
+   "RN": 33.0,
+   "RO": 33.0,
+   "RR": 33.0,
+   "RS": 22.0,
+   "SC": 19.0,
+   "SE": 31.0,
+   "SP": 8.0,
+   "TO": 27.0
+  },
+  "transit_p50_by_band": [
+   1.69,
+   1.87,
+   2.22,
+   2.65,
+   3.18,
+   4.56,
+   6.19,
+   6.31,
+   6.92,
+   6.97,
+   7.11,
+   7.11,
+   7.15,
+   7.02,
+   7.49,
+   8.73,
+   9.11,
+   9.11,
+   8.86,
+   9.21,
+   10.95,
+   12.85,
+   13.94,
+   15.11
+  ],
+  "freight_per_unit_by_band": [
+   8.72,
+   12.83,
+   15.66,
+   17.21,
+   19.94,
+   26.56,
+   27.53,
+   30.71,
+   36.63
+  ]
+ },
+ "runtime_s": 21.1
+}
